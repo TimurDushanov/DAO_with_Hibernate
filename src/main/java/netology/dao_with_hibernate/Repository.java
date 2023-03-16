@@ -1,10 +1,8 @@
 package netology.dao_with_hibernate;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.NamedQuery;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
-import jakarta.transaction.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +52,7 @@ public class Repository {
 
 
     }
+
     protected List<Person> getPersonsByCity(String city) {
         Query query = entityManager.createNamedQuery("findAllCases");
         query.setParameter("city", city);
