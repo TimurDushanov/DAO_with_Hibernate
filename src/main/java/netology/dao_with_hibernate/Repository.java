@@ -44,7 +44,6 @@ public class Repository {
                 .phoneNumber("+7 (666) 666-66-66")
                 .cityOfLiving("Krasnodar")
                 .build();
-        List<Person> personList = new ArrayList<>();
         entityManager.persist(timur);
         entityManager.persist(anar);
         entityManager.persist(dmitriy);

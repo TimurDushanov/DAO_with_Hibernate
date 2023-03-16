@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 public class Controller {
+
     private Service service;
 
     @GetMapping("/persons/by-city")

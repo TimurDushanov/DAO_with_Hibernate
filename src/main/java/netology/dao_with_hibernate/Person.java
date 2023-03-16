@@ -1,6 +1,5 @@
 package netology.dao_with_hibernate;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
