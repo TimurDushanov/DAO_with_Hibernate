@@ -53,7 +53,7 @@ public class Repository {
     }
 
     protected List<Person> getPersonsByCity(String city) {
-        Query query = entityManager.createNamedQuery("findAllCases");
+        Query query = entityManager.createNamedQuery("findPersonVyCity");
         query.setParameter("city", city);
         List<Person> personList = query.getResultList();
 

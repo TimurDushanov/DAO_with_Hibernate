@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @Table(name = "persons")
 @NamedQuery(
-        name = "findAllCases",
+        name = "findPersonVyCity",
         query = "select p from persons p where p.city_of_living = :city"
 )
 public class Person {
