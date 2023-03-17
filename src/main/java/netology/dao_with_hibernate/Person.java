@@ -17,15 +17,8 @@ import lombok.NoArgsConstructor;
         query = "select * from persons p where p.city_of_living = :city"
 )
 public class Person {
-    @Id
-    @Column(length = 50, name = "name")
-    private String name;
-    @Id
-    @Column(length = 50, name = "surname")
-    private String surname;
-    @Id
-    @Column(length = 3, name = "age")
-    private int age;
+    @EmbeddedId
+    private Contact contact;
     @Column(length = 25, name = "phone_number", nullable = false)
     private String phoneNumber;
     @Column(length = 50, name = "city_of_living", nullable = false)

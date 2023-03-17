@@ -1,1 +1,1 @@
-create schema hibernate;
+create schema if not exists hibernate;

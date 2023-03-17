@@ -3,45 +3,51 @@ package netology.dao_with_hibernate;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
+import lombok.AllArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @org.springframework.stereotype.Repository
+@AllArgsConstructor
 public class Repository {
 
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
 
     {
-        Person timur = Person.builder().name("Timur")
-                .surname("Dushanov")
-                .age(31)
+        Person timur = Person.builder().contact(Contact.builder().
+                        name("Timur")
+                        .surname("Dushanov")
+                        .age(31)
+                        .build())
                 .phoneNumber("+7(777) 777-77-77")
                 .cityOfLiving("Moscow")
                 .build();
 
-        Person anar = Person.builder()
-                .name("Anar")
-                .surname("Gafarov")
-                .age(31)
+        Person anar = Person.builder().contact(Contact.builder()
+                        .name("Anar")
+                        .surname("Gafarov")
+                        .age(31)
+                        .build())
                 .phoneNumber("+7 (111) 111-11-11")
                 .cityOfLiving("Moscow")
                 .build();
 
-        Person dmitriy = Person.builder()
-                .name("Dmitriy")
-                .surname("Guliy")
-                .age(34)
+        Person dmitriy = Person.builder().contact(Contact.builder()
+                        .name("Dmitriy")
+                        .surname("Guliy")
+                        .age(34)
+                        .build())
                 .phoneNumber("+7 (999) 999-99-99")
                 .cityOfLiving("Moscow")
                 .build();
 
-        Person vlad = Person.builder()
-                .name("Vladislav")
-                .surname("Reznikov")
-                .age(42)
+        Person vlad = Person.builder().contact(Contact.builder()
+                        .name("Vladislav")
+                        .surname("Reznikov")
+                        .age(42)
+                        .build())
                 .phoneNumber("+7 (666) 666-66-66")
                 .cityOfLiving("Krasnodar")
                 .build();
@@ -49,8 +55,6 @@ public class Repository {
         entityManager.persist(anar);
         entityManager.persist(dmitriy);
         entityManager.persist(vlad);
-
-
     }
 
     protected List<Person> getPersonsByCity(String city) {
