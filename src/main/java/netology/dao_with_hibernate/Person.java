@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "persons")
 @NamedQuery(
         name = "findPersonVyCity",
-        query = "select p from persons p where p.city_of_living = :city"
+        query = "select * from persons p where p.city_of_living = :city"
 )
 public class Person {
     @Id
