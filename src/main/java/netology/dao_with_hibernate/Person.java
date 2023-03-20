@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @Table(name = "persons")
-@NamedQuery(
-        name = "findPersonVyCity",
-        query = "select * from persons p where p.city_of_living = :city"
-)
+//@NamedQuery(
+//        name = "findPersonByCity",
+//        query = "select p from persons p where p.city_of_living = :city"
+//)
 public class Person {
     @EmbeddedId
     private Contact contact;

@@ -6,15 +6,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
-@RestController
 @AllArgsConstructor
+@RestController
 public class Controller {
 
-    private Service service;
+    private final Repository repository;
+
 
     @GetMapping("/persons/by-city")
     protected List<Person> getPersonsByCity(@RequestParam (value = "city", required = false) String city) {
-        return service.getPersonsByCity(city);
+        return repository.getPersonsByCity(city);
     }
+
 }
