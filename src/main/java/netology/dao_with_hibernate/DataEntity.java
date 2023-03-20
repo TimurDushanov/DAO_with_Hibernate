@@ -40,8 +40,8 @@ public class DataEntity implements CommandLineRunner {
                 .phoneNumber("+7 (666) 666-66-66")
                 .cityOfLiving("Krasnodar")
                 .build();
-        entityManager.persist(anar);
-        entityManager.persist(dmitriy);
-        entityManager.persist(vlad);
+//        entityManager.persist(anar);
+//        entityManager.persist(dmitriy);
+//        entityManager.persist(vlad);
     }
 }

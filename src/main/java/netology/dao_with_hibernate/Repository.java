@@ -16,7 +16,7 @@ public class Repository {
 
 
     protected List<Person> getPersonsByCity(String city) {
-        var query = entityManager.createNativeQuery("select * from public.persons p where p.city_of_living = :city");
+        var query = entityManager.createNamedQuery("findPersonByCity");
         query.setParameter("city", city);
         List<Person> personList = query.getResultList();
 
