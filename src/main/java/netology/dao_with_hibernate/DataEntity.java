@@ -3,6 +3,8 @@ package netology.dao_with_hibernate;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import netology.dao_with_hibernate.Model.Contact;
+import netology.dao_with_hibernate.Model.Person;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
